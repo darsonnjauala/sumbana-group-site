@@ -100,7 +100,7 @@ export function Header() {
                   {/* Dropdown Menu Flutuante */}
                   {isOpen && (
                     <div
-                      className="absolute top-full left-0 mt-1.5 w-72 rounded-2xl bg-obsidian-surface/98 backdrop-blur-xl border border-white/10 shadow-2xl shadow-black/80 p-2 z-50 animate-in fade-in slide-in-from-top-1 duration-150"
+                      className="absolute top-full left-0 mt-2 w-72 rounded-2xl bg-[#141518] border border-white/10 shadow-2xl shadow-black p-2.5 z-50 animate-in fade-in slide-in-from-top-1 duration-150"
                       onMouseEnter={() => handleMouseEnter(item.label)}
                       onMouseLeave={handleMouseLeave}
                     >
