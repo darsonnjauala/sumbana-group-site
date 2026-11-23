@@ -36,6 +36,19 @@ export interface MomentTrigger {
   highlight: string;
 }
 
+export interface NavChild {
+  label: string;
+  description: string;
+  href: string;
+  badge?: string;
+}
+
+export interface NavItem {
+  label: string;
+  href?: string;
+  children?: NavChild[];
+}
+
 export const SITE_DATA = {
   brand: {
     name: "Sumbana Group",
@@ -54,13 +67,46 @@ export const SITE_DATA = {
   },
 
   nav: [
-    { label: "Obras", href: "#lookbook" },
-    { label: "Ambientes", href: "#ambientes" },
-    { label: "Peças", href: "#catalogo" },
-    { label: "Método", href: "#metodo" },
-    { label: "Engenharia", href: "#engenharia" },
-    { label: "Showroom", href: "#showroom" },
-  ],
+    {
+      label: "Portfólio",
+      children: [
+        {
+          label: "Obras Realizadas",
+          description: "Suítes, closets e residências concluídas em Maputo",
+          href: "#lookbook",
+        },
+        {
+          label: "Ambientes Projetados",
+          description: "Visualização espacial 3D e design de autor",
+          href: "#momentos",
+        },
+      ],
+    },
+    {
+      label: "Soluções",
+      children: [
+        {
+          label: "Mobiliário Sob Medida",
+          description: "Camas de autor, roupeiros, cozinhas e ilhas",
+          href: "#catalogo",
+        },
+        {
+          label: "Método Turnkey",
+          description: "Do projeto 3D à entrega de chaves sem desvios",
+          href: "#metodo",
+        },
+        {
+          label: "Engenharia & Proteção",
+          description: "Cortinados, serralharia fina e segurança perimetral",
+          href: "#engenharia",
+        },
+      ],
+    },
+    {
+      label: "Showroom",
+      href: "#showroom",
+    },
+  ] as NavItem[],
 
   hero: {
     eyebrow: "Atelier de Interiores & Alta Marcenaria • Maputo",
