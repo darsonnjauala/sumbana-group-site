@@ -2,6 +2,8 @@
   "$schema": "https://broadware.dev/schemas/site-profile.json",
   "project_slug": "sumbana-group",
   "client_name": "Sumbana Group",
+  "domain": "sumbana.broadautomations.com",
+  "canonical_url": "https://sumbana.broadautomations.com",
   "b_wos_version": "10.0.0",
   "capabilities": {
     "NAV_MODEL": "SPATIAL_JOURNEY",

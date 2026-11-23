@@ -39,6 +39,8 @@ export interface MomentTrigger {
 export const SITE_DATA = {
   brand: {
     name: "Sumbana Group",
+    domain: "sumbana.broadautomations.com",
+    siteUrl: "https://sumbana.broadautomations.com",
     logoImage: "/images/logo.jpg",
     tagline: "Design de Interiores & Marcenaria Sob Medida",
     subtagline: "Transformamos espaços com tecnologia, proteção e estética.",

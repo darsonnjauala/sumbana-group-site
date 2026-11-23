@@ -3,7 +3,7 @@ export const meta = {
   title: "Sumbana Group — Design de Interiores & Marcenaria Sob Medida em Maputo",
   description:
     "Estúdio de design de interiores, projetos 3D e marcenaria sob medida em Maputo. Transformamos espaços comuns em ambientes extraordinários.",
-  url: "https://sumbanagroup.co.mz",
+  url: "https://sumbana.broadautomations.com",
   locale: "pt_MZ",
   twitterHandle: "@sumbanagroup",
 };

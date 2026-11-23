@@ -43,9 +43,8 @@ const config: Config = {
         white: "#FDFDFD",
       },
       fontFamily: {
-        // Carregadas via next/font; ver src/app/fonts.ts.
-        display: ["var(--font-display)", "system-ui", "sans-serif"],
-        body: ["var(--font-body)", "system-ui", "sans-serif"],
+        display: ["'Cormorant Garamond'", "var(--font-display)", "Georgia", "serif"],
+        body: ["'Plus Jakarta Sans'", "var(--font-body)", "system-ui", "sans-serif"],
         mono: ["var(--font-mono)", "ui-monospace", "monospace"],
       },
       fontSize: {
