@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-obsidian text-travertine font-body;
+    font-size: 1rem;
+    line-height: 1.65;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5 {
+    @apply font-display text-travertine tracking-tight;
+  }
+
+  h1 { @apply text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-normal leading-[1.08]; }
+  h2 { @apply text-3xl sm:text-4xl md:text-5xl font-normal leading-[1.15]; }
+  h3 { @apply text-2xl md:text-3xl font-medium leading-[1.25]; }
+  h4 { @apply text-xl md:text-2xl font-medium leading-[1.3]; }
+
+  :focus-visible {
+    outline: 2px solid theme('colors.brand.orange');
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  ::selection {
+    background-color: theme('colors.brand.orange');
+    color: theme('colors.white');
+  }
+}
+
+@layer components {
+  .container-site {
+    @apply mx-auto px-5 sm:px-6 md:px-12 max-w-[1280px];
+  }
+
+  .label-eyebrow {
+    @apply text-[11px] uppercase tracking-[0.2em] font-semibold text-brand-orange;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center min-h-[48px] px-7 py-3 rounded-full
+           font-body text-xs uppercase tracking-[0.14em] font-semibold text-white bg-brand-orange
+           transition-all duration-300 hover:bg-brand-orangeHover hover:shadow-lg hover:shadow-brand-orange/20
+           active:scale-[0.98] cursor-pointer;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center min-h-[48px] px-7 py-3 rounded-full
+           font-body text-xs uppercase tracking-[0.14em] font-medium text-travertine
+           border border-white/20 transition-all duration-300
+           hover:border-white hover:text-white active:scale-[0.98] cursor-pointer;
+  }
+
+  .card-atelier {
+    @apply rounded-2xl bg-obsidian-surface border border-white/10 p-6 md:p-8
+           transition-all duration-300 hover:border-brand-orange/40;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="Site mark">
+  <title>Site mark</title>
+  <!-- Placeholder neutro: rectângulo arredondado com inicial.
+       Substituir pelo símbolo da marca do cliente. Cyan accent sobre Void. -->
+  <rect width="100" height="100" rx="18" fill="#07090F"/>
+  <rect x="22" y="22" width="56" height="56" rx="10" fill="none" stroke="#00C8FF" stroke-width="8"/>
+</svg>
