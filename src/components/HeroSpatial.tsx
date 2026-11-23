@@ -86,7 +86,7 @@ export function HeroSpatial() {
           garantindo que headline, CTAs, indicadores e vídeo
           são visíveis na totalidade logo ao entrar na página.
           ========================================= */}
-      <div className="hidden lg:flex flex-col justify-center container-site min-h-[calc(100vh-5rem)] max-h-[calc(100vh-5rem)] py-4 xl:py-6">
+      <div className="hidden lg:flex flex-col justify-center container-site min-h-[calc(100svh-4.5rem)] lg:h-[calc(100svh-4.5rem)] py-3 xl:py-6">
         <div className="grid grid-cols-12 gap-8 xl:gap-12 2xl:gap-16 items-center">
           {/* Coluna Texto */}
           <div className="col-span-6 flex flex-col items-start justify-center">

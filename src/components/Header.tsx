@@ -19,18 +19,18 @@ export function Header() {
               priority
             />
           </div>
-          <div className="flex flex-col">
-            <span className="font-display text-xl md:text-2xl font-normal tracking-tight text-travertine group-hover:text-brand-orange transition-colors">
+          <div className="flex flex-col whitespace-nowrap">
+            <span className="font-display text-lg lg:text-xl font-normal tracking-tight text-travertine group-hover:text-brand-orange transition-colors">
               {SITE_DATA.brand.name}
             </span>
-            <span className="text-[9px] md:text-[10px] uppercase tracking-[0.2em] text-brand-orange font-semibold">
+            <span className="text-[9px] uppercase tracking-[0.2em] text-brand-orange font-semibold">
               Interiores • Maputo
             </span>
           </div>
         </a>
 
         {/* Links Desktop */}
-        <nav className="hidden lg:flex items-center gap-8 text-xs uppercase tracking-[0.14em] font-medium text-travertine/70">
+        <nav className="hidden lg:flex items-center gap-4 xl:gap-8 text-[11px] xl:text-xs uppercase tracking-[0.14em] font-medium text-travertine/70 whitespace-nowrap">
           {SITE_DATA.nav.map((item) => (
             <a
               key={item.href}
@@ -43,14 +43,14 @@ export function Header() {
         </nav>
 
         {/* Ações Rápidas */}
-        <div className="flex items-center gap-3 md:gap-4">
+        <div className="flex items-center gap-3 xl:gap-4 shrink-0 whitespace-nowrap">
           <a
             href={SITE_DATA.brand.whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden md:inline-flex items-center gap-2 text-xs text-travertine/80 hover:text-brand-orange transition-colors"
+            className="hidden xl:inline-flex items-center gap-2 text-xs text-travertine/80 hover:text-brand-orange transition-colors"
           >
-            <Phone className="w-3.5 h-3.5 text-brand-orange" />
+            <Phone className="w-3.5 h-3.5 text-brand-orange shrink-0" />
             <span className="tracking-wide">{SITE_DATA.brand.phone}</span>
           </a>
 
@@ -63,8 +63,10 @@ export function Header() {
           </a>
 
           <a
-            href="#catalogo"
-            className="hidden md:inline-flex btn-primary text-[11px] px-5 py-2.5 min-h-[42px]"
+            href={SITE_DATA.brand.whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden md:inline-flex btn-primary text-[11px] px-4 xl:px-5 py-2.5 min-h-[40px] xl:min-h-[42px]"
           >
             Pedir Orçamento
           </a>
