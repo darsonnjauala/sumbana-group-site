@@ -6,7 +6,7 @@ import { Phone } from "lucide-react";
 export function Header() {
   return (
     <header className="sticky top-0 z-40 bg-obsidian/95 backdrop-blur-md border-b border-white/5 transition-all">
-      <div className="container-site flex items-center justify-between h-16 md:h-20">
+      <div className="container-site flex items-center justify-between h-16 lg:h-18">
         {/* Logo & Marca Oficial */}
         <a href="#" className="flex items-center gap-2.5 md:gap-3.5 group">
           <div className="w-8 h-8 md:w-10 md:h-10 rounded-full overflow-hidden border border-brand-orange/40 shrink-0">

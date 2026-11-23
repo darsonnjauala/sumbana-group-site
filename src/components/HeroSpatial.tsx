@@ -81,75 +81,80 @@ export function HeroSpatial() {
       </div>
 
       {/* =========================================
-          VERSÃO DESKTOP (>= 1024px / 1440px)
-          Composição arquitetónica Split-Screen Monolith
+          VERSÃO DESKTOP (>= 1024px / Viewport Above-The-Fold)
+          Composição arquitetónica 100vh sem overflow vertical,
+          garantindo que headline, CTAs, indicadores e vídeo
+          são visíveis na totalidade logo ao entrar na página.
           ========================================= */}
-      <div className="hidden lg:block container-site py-20 lg:py-28">
-        <div className="grid grid-cols-12 gap-16 items-center">
+      <div className="hidden lg:flex flex-col justify-center container-site min-h-[calc(100vh-5rem)] max-h-[calc(100vh-5rem)] py-4 xl:py-6">
+        <div className="grid grid-cols-12 gap-8 xl:gap-12 2xl:gap-16 items-center">
           {/* Coluna Texto */}
-          <div className="col-span-6 flex flex-col items-start">
-            <span className="label-eyebrow mb-4 block">
+          <div className="col-span-6 flex flex-col items-start justify-center">
+            <span className="label-eyebrow mb-2 xl:mb-3 block text-[10px] xl:text-[11px]">
               {hero.eyebrow}
             </span>
 
-            <h1 className="mb-6 font-normal text-travertine">
+            <h1 className="text-3xl xl:text-4xl 2xl:text-[2.75rem] font-normal leading-[1.08] mb-3 xl:mb-4 text-travertine">
               Transformamos metros quadrados em{" "}
               <span className="italic font-normal text-brand-orange">
                 ambientes extraordinários.
               </span>
             </h1>
 
-            <p className="text-lg text-travertine/80 font-light mb-8 leading-relaxed max-w-xl">
+            <p className="text-xs xl:text-sm text-travertine/80 font-light mb-4 xl:mb-6 leading-relaxed max-w-xl line-clamp-3">
               {hero.description}
             </p>
 
-            <div className="flex items-center gap-4 mb-12">
+            <div className="flex items-center gap-3 xl:gap-4 mb-4 xl:mb-6">
               <a
                 href={SITE_DATA.brand.whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-primary"
+                className="btn-primary text-xs !min-h-[42px] xl:!min-h-[46px] px-5 xl:px-7"
               >
                 {hero.ctaPrimary}
               </a>
-              <a href="#lookbook" className="btn-secondary">
+              <a
+                href="#lookbook"
+                className="btn-secondary text-xs !min-h-[42px] xl:!min-h-[46px] px-5 xl:px-7"
+              >
                 {hero.ctaSecondary}
               </a>
             </div>
 
-            <div className="grid grid-cols-3 gap-6 pt-6 border-t border-white/10 w-full">
+            <div className="grid grid-cols-3 gap-4 xl:gap-6 pt-3 xl:pt-4 border-t border-white/10 w-full">
               <div>
-                <span className="font-display text-xl text-brand-orange block font-normal">
+                <span className="font-display text-lg xl:text-xl text-brand-orange block font-normal">
                   01
                 </span>
-                <p className="text-xs uppercase tracking-[0.1em] font-medium text-travertine mt-1">
+                <p className="text-[10px] xl:text-xs uppercase tracking-[0.1em] font-medium text-travertine mt-0.5">
                   Projetos 3D
                 </p>
-                <p className="text-[11px] text-travertine/60 font-light">
+                <p className="text-[10px] xl:text-[11px] text-travertine/60 font-light">
                   Visualização prévia
                 </p>
               </div>
 
               <div>
-                <span className="font-display text-xl text-brand-orange block font-normal">
+                <span className="font-display text-lg xl:text-xl text-brand-orange block font-normal">
                   02
                 </span>
-                <p className="text-xs uppercase tracking-[0.1em] font-medium text-travertine mt-1">
+                <p className="text-[10px] xl:text-xs uppercase tracking-[0.1em] font-medium text-travertine mt-0.5">
                   Marcenaria
                 </p>
-                <p className="text-[11px] text-travertine/60 font-light">
+                <p className="text-[10px] xl:text-[11px] text-travertine/60 font-light">
                   Móveis sob medida
                 </p>
               </div>
 
               <div>
-                <span className="font-display text-xl text-brand-orange block font-normal">
+                <span className="font-display text-lg xl:text-xl text-brand-orange block font-normal">
                   03
                 </span>
-                <p className="text-xs uppercase tracking-[0.1em] font-medium text-travertine mt-1">
+                <p className="text-[10px] xl:text-xs uppercase tracking-[0.1em] font-medium text-travertine mt-0.5">
                   Turnkey
                 </p>
-                <p className="text-[11px] text-travertine/60 font-light">
+                <p className="text-[10px] xl:text-[11px] text-travertine/60 font-light">
                   Entrega de chaves
                 </p>
               </div>
@@ -157,8 +162,8 @@ export function HeroSpatial() {
           </div>
 
           {/* Coluna Vídeo / Fotografia Real Arquitetónica */}
-          <div className="col-span-6 relative">
-            <div className="relative aspect-[4/5] rounded-3xl overflow-hidden border border-white/10 shadow-2xl shadow-black/80 bg-obsidian">
+          <div className="col-span-6 flex items-center justify-center lg:justify-end">
+            <div className="relative w-full max-w-[400px] xl:max-w-[460px] 2xl:max-w-[500px] aspect-[4/5] max-h-[calc(100vh-7.5rem)] rounded-2xl xl:rounded-3xl overflow-hidden border border-white/10 shadow-2xl shadow-black/80 bg-obsidian">
               <video
                 autoPlay
                 muted
@@ -171,11 +176,11 @@ export function HeroSpatial() {
                 <source src={hero.heroVideo} type="video/mp4" />
               </video>
               <div className="absolute inset-0 bg-gradient-to-t from-obsidian via-transparent to-transparent opacity-80 pointer-events-none" />
-              <div className="absolute bottom-6 left-6 right-6 z-10 pointer-events-none">
-                <span className="text-[10px] uppercase tracking-[0.2em] text-brand-orange font-semibold block mb-1">
+              <div className="absolute bottom-4 left-5 right-5 xl:bottom-6 xl:left-6 xl:right-6 z-10 pointer-events-none">
+                <span className="text-[9px] xl:text-[10px] uppercase tracking-[0.2em] text-brand-orange font-semibold block mb-0.5 xl:mb-1">
                   Obra Real • Maputo
                 </span>
-                <p className="text-sm font-medium text-travertine">
+                <p className="text-xs xl:text-sm font-medium text-travertine">
                   {hero.heroImageCaption}
                 </p>
               </div>
